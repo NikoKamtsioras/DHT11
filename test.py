@@ -3,6 +3,8 @@ from prometheus_client import *
 import time
 global humidity
 global temperature
+humidity = 0
+temperature = 0
 h = Gauge("DHT11_humidity","")
 temp = Gauge("DHT11_temp","")
 def get_temperature_readings():
@@ -11,6 +13,6 @@ def get_temperature_readings():
     temperature = format(temperature, ".2f") + "C"
     
 
-while True:
+while True():
     print(humidity)
     time.sleep(1)
