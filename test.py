@@ -9,4 +9,4 @@ def get_temperature_readings():
 
 while True:
     print(get_temperature_readings())
-    time.sleep(30)
+    time.sleep(1)
