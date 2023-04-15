@@ -10,8 +10,8 @@ def get_temperature_readings():
     global humidity
     global temperature
     humidity, temperature = dht_sensor.read_retry(dht_sensor.DHT11, 4)
-    humidity = format(humidity, ".2f") + "%"
-    temperature = format(temperature, ".2f") + "C"
+    humidity = format(humidity, ".2f")
+    temperature = format(temperature, ".2f")
     
 if __name__ == '__main__':
     start_http_server(8000)
