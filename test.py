@@ -14,5 +14,6 @@ def get_temperature_readings():
     
 
 while True:
+    get_temperature_readings()
     print(humidity)
     time.sleep(1)
