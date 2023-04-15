@@ -5,7 +5,7 @@ import time
 humidity = 0
 temperature = 0
 h = Gauge("DHT11_humidity","")
-temp = Gauge("DHT11_temp","")
+t = Gauge("DHT11_temp","")
 def get_temperature_readings():
     global humidity
     global temperature
@@ -13,8 +13,12 @@ def get_temperature_readings():
     humidity = format(humidity, ".2f") + "%"
     temperature = format(temperature, ".2f") + "C"
     
-
-while True:
-    get_temperature_readings()
-    print(humidity)
-    time.sleep(1)
+if __name__ == '__main__':
+    start_http_server(8000)
+    while True:
+        get_temperature_readings()
+        print(humidity)
+        print(temperature)
+        h.set(humidity)
+        t.set(temperature)
+        time.sleep(1)
