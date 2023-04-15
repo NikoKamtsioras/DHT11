@@ -2,7 +2,7 @@ import Adafruit_DHT as dht_sensor
 from prometheus_client import *
 import time
 
-h = Gauge()
+h = Gauge("DHT11 humidity","")
 temp = Gauge("DHT11 temp","")
 def get_temperature_readings():
     humidity, temperature = dht_sensor.read_retry(dht_sensor.DHT11, 4)
