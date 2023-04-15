@@ -17,8 +17,8 @@ if __name__ == '__main__':
     start_http_server(8000)
     while True:
         get_temperature_readings()
-        print(humidity)
-        print(temperature)
+        #print(humidity)
+        #print(temperature)
         h.set(humidity)
         t.set(temperature)
         time.sleep(1)
