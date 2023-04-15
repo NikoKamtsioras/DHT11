@@ -13,6 +13,6 @@ def get_temperature_readings():
     temperature = format(temperature, ".2f") + "C"
     
 
-while True():
+while True:
     print(humidity)
     time.sleep(1)
